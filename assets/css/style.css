@@ -1,0 +1,71 @@
+html {
+  height: 100%; }
+  html body {
+    height: 100%; }
+  html .full-height {
+    height: 100%; }
+  html nav.navbar.navbar-inverse {
+    margin: 0; }
+  html .video-container {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    position: absolute; }
+    html .video-container video {
+      min-width: 100%;
+      min-height: 100%;
+      width: 100%;
+      height: 120%;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      z-index: -1;
+      -webkit-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%); }
+  html .white-text {
+    color: white; }
+  html .absolute {
+    position: fixed; }
+  html .front {
+    z-index: 100 !important; }
+  html .white {
+    background-color: white; }
+  html .card {
+    width: 300px !important;
+    height: 500px !important;
+    background-color: rgba(120, 0, 0, 0.5); }
+  html .vertical-center {
+    -ms-display: flex;
+    display: flex;
+    /* alineacion vertical */
+    align-items: center;
+    /* alineacion horizontal */
+    justify-content: center; }
+
+
+    .banner
+{
+  width: 100%;
+  height: 200px;
+  margin-bottom: 2em;
+  margin-left: 2.7em;
+
+}
+h1
+{
+  color: #ffffff;
+  font-size: 60px;
+}
+fieldset{
+  background-color: #ffffff;
+-webkit-box-shadow: 2px 2px 4px 4px rgba(8,8,8,.2);
+box-shadow: 2px 2px 4px 4px rgba(8,8,8,.2);
+}
+legend
+{
+  background-color: #ffffff;
+  color: #888888;
+  -webkit-border-radius: 3px 3px 3px 3px;
+  border-radius: 3px 3px 3px 3px;
+}
+

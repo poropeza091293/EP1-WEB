@@ -7,7 +7,7 @@ ob_start();
 
 $servidor='localhost';
     $user='root';
-    $password='091293';
+    $password='crazy124';
     $bd= 'pizzeria';
 
 
@@ -80,6 +80,8 @@ if(isset($_POST['cod_producto']))
 			}
 	}
 
+
+	$_POST['cod_producto']=null;
 	
 	mysqli_close($conec); //cierra la conexion
 
@@ -268,14 +270,14 @@ if (isset($_POST['orden']))
 		//la siguiente sección de $correo, está comentada para que sirva en un servidor web, pero en localhost, se descomenta para que funcione
 	 
 		$correo = new PHPMailer();
-		/*$correo->IsSMTP(); 
+		$correo->IsSMTP(); 
 		$correo->SMTPSecure = 'tls';
 		$correo->SMTPAuth = true;
 		$correo->Host = "smtp.gmail.com";
 		$correo->Port = 587;
 		$correo->SMTPDebug = 0;
 		$correo->Username ='ompi152172@upemor.edu.mx';
-		$correo->Password = '091293po'; //Su password*/
+		$correo->Password = '091293po'; //Su password
 		$correo->SetFrom('ompi152172@upemor.edu.mx', 'Peter Oropeza');
 		$correo->AddReplyTo('ompi152172@upemor.edu.mx', 'Peter Oropeza');
 		$correo->Subject = "Prueba Pizzeria Producto";
@@ -333,14 +335,14 @@ if(isset($_POST['envi']))
 
 		//la siguiente sección de $correo, está comentada para que sirva en un servidor web, pero en localhost, se descomenta para que funcione
 		$correo = new PHPMailer();
-		/*$correo->IsSMTP(); 
+		$correo->IsSMTP(); 
 		$correo->SMTPSecure = 'tls';
 		$correo->SMTPAuth = true;
 		$correo->Host = "smtp.gmail.com";
 		$correo->Port = 587;
 		$correo->SMTPDebug = 0;
 		$correo->Username ='ompi152172@upemor.edu.mx';
-		$correo->Password = '091293po'; //Su password*/
+		$correo->Password = '091293po'; //Su password
 		$correo->SetFrom("ompi152172@upemor.edu.mx", "Peter Savier");
 		$correo->AddReplyTo("ompi152172@upemor.edu.mx", "Peter Savier");
 		$correo->Subject = "Prueba Pizzeria Contacto";

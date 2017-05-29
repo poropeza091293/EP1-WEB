@@ -51,7 +51,7 @@
 
     		$servidor='localhost';
       $user='root';
-      $password='091293';
+      $password='crazy124';
       $bd= 'pizzeria';
 
 		    if($_POST['usu']!=null)

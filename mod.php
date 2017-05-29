@@ -37,11 +37,11 @@
     <div class="navbar-collapse collapse navbar-responsive-collapse">
       <ul class="nav navbar-nav">
         <li><a href="home.php">Inicio</a></li>
-        <li class="active"><a href="pizza.php">Pizza</a></li>
+        <li><a href="pizza.php">Pizza</a></li>
         <li><a href="postre.php">Postres</a></li>
         <li><a href="bebida.php">Bebidas</a></li>
         <li><a href="mostrar_carrito.php">Carrito</a></li>
-        <li><a href="mod.php">Modificar Productos</a></li>
+        <li class="active"><a href="mod.php">Modificar Productos</a></li>
         <li><a href="contacto.php">Contactános</a></li>
       </ul>
       <form class="navbar-form navbar-left">

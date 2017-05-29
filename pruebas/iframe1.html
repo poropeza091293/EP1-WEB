@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<link rel="stylesheet" href="../css/ventanas-modales.css">
+		<script>
+var ventana_secundaria
+
+function cerrarVentana(){
+ventana_secundaria.close()
+}
+ 
+function validar()
+{
+	var btnUNO = document.getElementById("btnConsulta");
+	var btnU = document.getElementById("envioCorreo");
+	 btnUNO.style.visibility  = 'hidden'; // No se ve
+     btnUNO.style.display = 'none'; 
+	 btnU.style.visibility  = 'visible'; // No se ve
+    
+     document.getElementById('envioCorreo').style.display='block';	
+     if (document.formulario.correo.value.length==0 && document.formulario.cuenta.value.length==0 ) {
+		if (document.formulario.EmailContacto.value.length==0) {
+			document.formulario.EmailContacto.focus();
+			btnUNO.style.visibility  = 'visible';
+            btnUNO.style.display = '';
+	 		btnU.style.visibility  = 'hidden'; // No se ve
+     		btnU.style.display = 'none';	
+     		document.getElementById('envioCorreo2').style.display='block';
+			return false; 
+		}
+		if (document.formulario.nomEmpresa.value.length==0) {
+			document.formulario.nomEmpresa.focus();
+			btnUNO.style.visibility  = 'visible';
+            btnUNO.style.display = '';
+	 		btnU.style.visibility  = 'hidden'; // No se ve
+     		btnU.style.display = 'none';
+     		document.getElementById('envioCorreo2').style.display='block';
+			return false; 
+		}
+		if (document.formulario.rfcEmpresa.value.length==0) {
+			document.formulario.rfcEmpresa.focus();
+			btnUNO.style.visibility  = 'visible';
+            btnUNO.style.display = '';
+	 		btnU.style.visibility  = 'hidden'; // No se ve
+     		btnU.style.display = 'none';
+     		document.getElementById('envioCorreo2').style.display='block';
+			return false; 
+		}
+		if (document.formulario.Telefono.value.length==0) {
+			document.formulario.Telefono.focus();
+			btnUNO.style.visibility  = 'visible';
+            btnUNO.style.display = '';
+	 		btnU.style.visibility  = 'hidden'; // No se ve
+     		btnU.style.display = 'none';
+     		document.getElementById('envioCorreo2').style.display='block';
+			return false; 
+		}
+		
+     document.getElementById('envioCorreo2').style.display='none';
+		document.formulario.submit(); 
+	}
+	else
+	{
+		if (document.formulario.cuenta.value.length==0) {
+			document.formulario.cuenta.focus();
+			btnUNO.style.visibility  = 'visible';
+            btnUNO.style.display = '';
+	 		btnU.style.visibility  = 'hidden'; // No se ve
+     		btnU.style.display = 'none';
+     		document.getElementById('envioCorreo2').style.display='block';
+			return false; 
+		}
+		if (document.formulario.correo.value.length==0 ) {
+			document.formulario.correo.focus();
+			btnUNO.style.visibility  = 'visible';
+            btnUNO.style.display = '';
+	 		btnU.style.visibility  = 'hidden'; // No se ve
+     		btnU.style.display = 'none';
+     		document.getElementById('envioCorreo2').style.display='block';
+			return false; 
+		}
+
+     document.getElementById('envioCorreo2').style.display='none';
+		document.formulario.submit(); 
+		
+	
+	}
+}
+
+function soloNumeros(e){
+	var key = window.Event ? e.which : e.keyCode
+	return (key >= 48 && key <= 57)
+}
+
+</script>
+
+</head>
+	<body>
+	<form action="mandarEmail.php" method="post" id="formulario" name="formulario" onsubmit="return window.open('../carrito.php?salir=gracias','ventanaprincipal');" >
+			<table width="99%">
+				<tr><td colspan="2"><div id="cabecera"><p>Si usted es cliente de Pacific Star Foodservice, por favor de introducir su correo electrónico. De lo contrario, favor de llenar el formulario</p></div></td></tr>
+
+				<tr>
+				    <td align="center" colspan="2"><div id="cElectro"><lable id="rojo">*</lable>CORREO ELECTRÓNICO</div></td>
+				    </tr>
+				<tr>
+				    <td colspan="2"><center><input autofocus name="correo" type="email" id="correo" width="30em"/></center>
+				    </td>
+				</tr>
+				<tr>
+				    <td align="center" colspan="2"><div id="cElectro"><lable id="rojo">*</lable>NÚMERO DE CLIENTE</div></td>
+				    </tr>
+					<tr>
+				    <td colspan="2"><center><input name="cuenta" type="text" id="cuenta" width="30em"/></center>
+				    </td>
+			  </tr>
+			  <tr><td colspan="2"><br></td></tr>
+			  <tr>
+                  <td colspan="2" valign="middle"><img src="../img/sombra2.png" width="98%" height="16" alt=""/></td>
+                </tr>
+                 <tr><td colspan="2"><br></td></tr>
+				<tr>
+				    <td align="center" colspan="2"><div id="cFormu">FORMULARIO</div></td>
+				    </tr>
+
+                 <tr><td colspan="2"><br></td></tr>
+                 <tr> 
+				    <td  colspan="2"><div id="nomEmp"><lable id="rojo">*</lable>NOMBRE DE LA EMPRESA</div></td>
+				    </tr><tr>
+				    <td colspan="2"><center><input name="nomEmpresa" type="text" id="nomEmpresa"  /></center>
+				    </td>
+			  </tr>
+			  <tr>
+				    <td colspan="2"><div id="rfc"><lable id="rojo">*</lable>NOMBRE DE CONTACTO: </div></td>
+				    </tr><tr>
+				    <td colspan="2"><center><input name="rfcEmpresa" type="text" id="rfcEmpresa" /></center>
+				    </td>
+			  </tr>
+			  <tr>
+				    <td colspan="2"><div id="cElectronico"><lable id="rojo">*</lable>CORREO ELECTRÓNICO</div></td>
+				    </tr><tr>
+				    <td colspan="2"><center><input name="EmailContacto" type="email" id="EmailContacto"  /></center>
+				    </td>
+			  </tr>
+			  <tr>
+			    <td colspan="2"><div id="tel"><lable id="rojo">*</lable>TELÉFONO</div></td></tr>
+			   <tr>
+			    <td><input name="Telefono" type="tel" id="Telefono" maxlength="10" minlenght="10" placeholder="9999999999"  onKeyPress="return soloNumeros(event)" /></td>
+			    <td> <select id="vertical" name="vertical">
+				  <option value="VERTICAL DE NEGOCIO">TIPO DE NEGOCIO</option>
+				  <option value="USR">QSR</option>
+				  <option value="CASUAL D">CASUAL D</option>
+				  <option value="ENTRETENIMIENTO">ENTRETENIMIENTO</option>
+				  <option value="HOTELES">HOTELES</option>
+				  <option value="COMEDORES IND">COMEDORES IND</option>
+				  <option value="OTROS">OTROS</option>
+				</select> </td>
+			  </tr>
+			  <tr>
+			    <td><div id="contry"> <label for="pais">PAÍS</label></div></td>
+			    <td><div id="state"><label for="estado">ESTADO</label></div></td>
+			    
+		    </tr>
+		    <tr>
+			    <td width="48%"><input name="pais" type="text" id="pais" /></td>
+		    	<td width="48%"><input name="estado" type="text" id="estado"/></td>
+		    </tr>
+		    <tr>
+		    	<td><div id="city">CIUDAD/MUNICIPIO</div></td>
+		    	<td><div id="cp">CODIGO POSTAL</div></td>
+			    <tr>
+			    <td><input name="ciudad" type="text" id="ciudad"/></td>
+			    <td><input name="postal" type="text" id="postal"/></td>
+			  </tr>
+
+			  <tr>
+			    <td colspan="2"><div id="domic">DOMICILIO</div></td></tr><tr>
+			    <td colspan="2"><input name="domicilio" type="text" id="domicilio"/></td>
+			  </tr>
+			  <tr>
+			    <td colspan="2"><center><div id="envioCorreo2"><input name="btnConsulta" type="button" id="btnConsulta" value="Enviar" onclick="validar()" /></div><div style="display:none;" id="envioCorreo">Se esta enviando el correo por favor espera</div></center></td>
+			  </tr>
+			</table>
+		</form>
+	</body>
+</html>

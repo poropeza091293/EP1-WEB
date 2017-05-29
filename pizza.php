@@ -85,7 +85,7 @@
     <?php  
 		$servidor='localhost';
         $user='root';
-        $password='091293';
+        $password='crazy124';
         $bd= 'pizzeria';
 
 
@@ -106,13 +106,15 @@
 		
     if($numero>0)
     {
-      echo "<div class='container'>";
-      echo "<form method='POST' action='carrito.php'>";
+      /*echo "<div class='container'>";
+      echo "<form method='POST' action='carrito.php'>";*/
     }
 		for ($i=0; $i < $numero ; $i++)
 		{ 
 			mysqli_data_seek ($result, $i);
 			$extraido= mysqli_fetch_array($result); //obtiene el arreglo con los elementos de la fila
+      echo "<div class='container'>";
+      echo "<form method='POST' action='carrito.php'>";
 
 	?>
       <div class="panel panel-success">
@@ -127,14 +129,15 @@
           <label for="222" class="control-label">Cantidad</label>
           <input type="number" name="canti" class="form-control" id="222">
         </div>
-        <button class="btn btn-raised btn-primary" type="submit">Ordenar</button>
+        <button class="btn btn-raised btn-primary"  type="submit">Ordenar</button>
       </div>
       </div>
-
 	<?php
-		}
     echo "</form>";
     echo "</div>";
+		}
+    /*echo "</form>";
+    echo "</div>";*/
 		mysqli_close($conec); //cierra la conexion
 	?>
 

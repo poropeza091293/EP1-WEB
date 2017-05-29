@@ -68,7 +68,7 @@
 
 $servidor='localhost';
 $user='root';
-$password='091293';
+$password='crazy124';
 $bd= 'pizzeria';
 
 $conec = mysqli_connect($servidor , $user ,$password ,$bd);
